@@ -10,7 +10,8 @@
 
 #import "FAVDetailViewController.h"
 
-// class extension - ivars available only within this class
+// empty parentheses make it a "class extension", which lets us define
+// properties available only within this class
 @interface FAVMasterViewController ()
     // Internal mutable array (NSArray is not mutable)
     @property (strong, nonatomic) NSMutableArray *favorites;
