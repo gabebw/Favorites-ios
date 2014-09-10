@@ -62,4 +62,15 @@
 
     return cell;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Show favorite as detailItem in detail view
+    if ([segue.identifier isEqualToString:@"ChosenItemShowsDetail"] ) {
+        // User just tapped on an item row and we're about to go into the detail view
+        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        id favorite = self.favorites[path.row];
+        FAVDetailViewController *detail = segue.destinationViewController;
+        detail.detailItem = favorite;
+    }
+}
 @end
