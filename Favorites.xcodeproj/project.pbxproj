@@ -22,6 +22,8 @@
 		002B4C4919B89C3C003DD082 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002B4C2819B89C3C003DD082 /* UIKit.framework */; };
 		002B4C5119B89C3C003DD082 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 002B4C4F19B89C3C003DD082 /* InfoPlist.strings */; };
 		002B4C5319B89C3C003DD082 /* FavoritesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B4C5219B89C3C003DD082 /* FavoritesTests.m */; };
+		002CBEC019C1FEC40010CA2D /* FAVFavoriteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 002CBEBF19C1FEC40010CA2D /* FAVFavoriteItem.m */; };
+		002CBEC119C1FEC40010CA2D /* FAVFavoriteItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 002CBEBF19C1FEC40010CA2D /* FAVFavoriteItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		002B4C4E19B89C3C003DD082 /* FavoritesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FavoritesTests-Info.plist"; sourceTree = "<group>"; };
 		002B4C5019B89C3C003DD082 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		002B4C5219B89C3C003DD082 /* FavoritesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesTests.m; sourceTree = "<group>"; };
+		002CBEBE19C1FEC40010CA2D /* FAVFavoriteItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAVFavoriteItem.h; sourceTree = "<group>"; };
+		002CBEBF19C1FEC40010CA2D /* FAVFavoriteItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAVFavoriteItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 				002B4C3319B89C3C003DD082 /* FAVAppDelegate.h */,
 				002B4C3419B89C3C003DD082 /* FAVAppDelegate.m */,
 				002B4C3619B89C3C003DD082 /* Main.storyboard */,
+				002CBEBE19C1FEC40010CA2D /* FAVFavoriteItem.h */,
+				002CBEBF19C1FEC40010CA2D /* FAVFavoriteItem.m */,
 				002B4C3919B89C3C003DD082 /* FAVMasterViewController.h */,
 				002B4C3A19B89C3C003DD082 /* FAVMasterViewController.m */,
 				002B4C3C19B89C3C003DD082 /* FAVDetailViewController.h */,
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002CBEC019C1FEC40010CA2D /* FAVFavoriteItem.m in Sources */,
 				002B4C3519B89C3C003DD082 /* FAVAppDelegate.m in Sources */,
 				002B4C3B19B89C3C003DD082 /* FAVMasterViewController.m in Sources */,
 				002B4C3119B89C3C003DD082 /* main.m in Sources */,
@@ -287,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				002CBEC119C1FEC40010CA2D /* FAVFavoriteItem.m in Sources */,
 				002B4C5319B89C3C003DD082 /* FavoritesTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

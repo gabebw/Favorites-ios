@@ -7,8 +7,8 @@
 //
 
 #import "FAVMasterViewController.h"
-
 #import "FAVDetailViewController.h"
+#import "FAVFavoriteItem.h"
 
 // empty parentheses make it a "class extension", which lets us define
 // properties available only within this class
@@ -26,18 +26,18 @@
     // Note that we're not doing alloc-init
     self.favorites = [NSMutableArray array];
 
-    // Create inline mutable array
-    self.favorites = [@[@"HELLO", @"HI", @"THERE"] mutableCopy];
-
     // @selector gives you a reference to a method
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
-
+ 
     // Put the "add" button on the right
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
 - (void)addItem:(id)sender {
-    id newItem = @"Something Else";
+    FAVFavoriteItem *newItem = [[FAVFavoriteItem alloc] init];
+    newItem.name = @"Cool name";
+    newItem.reason = @"Just because";
+
     // Insert item into array...
     [self.favorites insertObject:newItem atIndex:0];
 
@@ -74,7 +74,7 @@
     // Makes cells the first 10 or 12 times, then reuses them every time after that
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
     // Set cell contents
-    cell.textLabel.text = [favorite description];
+    cell.textLabel.text = [favorite name];
 
     return cell;
 }
@@ -86,7 +86,7 @@
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         id favorite = self.favorites[path.row];
         FAVDetailViewController *detail = segue.destinationViewController;
-        detail.detailItem = favorite;
+        detail.detailItem = [favorite reason];
     }
 }
 @end
