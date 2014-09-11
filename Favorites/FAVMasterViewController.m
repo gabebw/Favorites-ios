@@ -28,6 +28,22 @@
 
     // Create inline mutable array
     self.favorites = [@[@"HELLO", @"HI", @"THERE"] mutableCopy];
+
+    // @selector gives you a reference to a method
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
+
+    // Put the "add" button on the right
+    self.navigationItem.rightBarButtonItem = addButton;
+}
+
+- (void)addItem:(id)sender {
+    id newItem = @"Something Else";
+    // Insert item into array...
+    [self.favorites insertObject:newItem atIndex:0];
+
+    // ...and tell the tableview about it
+    NSIndexPath *rowZero = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[rowZero] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
