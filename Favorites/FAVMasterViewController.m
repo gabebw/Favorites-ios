@@ -71,6 +71,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
     // Set cell contents
     cell.textLabel.text = [favorite name];
+    // Set cell subtitle
+    cell.detailTextLabel.text = [favorite reason];
 
     return cell;
 }
