@@ -64,12 +64,8 @@
 // with content
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger row = indexPath.row;
-    // Grab a specific favorite (`id` is a type that can be a pointer to anything)
-
-    // Old:
-    //id favorite = [self.favorites objectAtIndex:row];
-    // New hotness:
-    id favorite = self.favorites[row];
+    // Grab a specific favorite
+    FAVFavoriteItem *favorite = self.favorites[row];
 
     // Makes cells the first 10 or 12 times, then reuses them every time after that
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"StandardCell" forIndexPath:indexPath];
