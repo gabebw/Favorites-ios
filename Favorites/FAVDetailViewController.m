@@ -47,6 +47,14 @@
     [self configureView];
 }
 
+// Called when user is about to exit the view, i.e. when they hit "Back"
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    self.detailItem.name = self.nameTextField.text;
+    self.detailItem.reason = self.reasonTextView.text;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -33,6 +33,12 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
+// Reload all the data when the list is shown
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
+}
+
 - (void)addItem:(id)sender {
     FAVFavoriteItem *newItem = [[FAVFavoriteItem alloc] init];
     newItem.name = @"Cool name";
