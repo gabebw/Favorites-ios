@@ -84,7 +84,7 @@
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
         id favorite = self.favorites[path.row];
         FAVDetailViewController *detail = segue.destinationViewController;
-        detail.detailItem = [favorite reason];
+        detail.detailItem = favorite;
     }
 }
 @end

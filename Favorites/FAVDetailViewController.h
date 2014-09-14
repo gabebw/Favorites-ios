@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FAVFavoriteItem.h"
 
 @interface FAVDetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) FAVFavoriteItem *detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
